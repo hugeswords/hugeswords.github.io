@@ -80,18 +80,19 @@
 
 
 <meta name="description" content="索引是什么索引是为了加速对表中数据行的检索而创建的一种分散的存储结构。索引存储着数据库数据在磁盘上的物理地址，查询时利用索引可以加快执行速度，尤其是数据量比较大时，索引的效果非常明显。一个非常恰当的比喻就是书的目录页与书的正文内容之间的关系，为了方便查找书中的内容，通过对内容建立索引形成目录。因此，要明白的一点就是，索引它也是一个文件，它是要占据物理空间的，而且占用的空间还不小，针对多个维度建立索">
+<meta name="keywords" content="数据库，索引">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql索引">
-<meta property="og:url" content="http://yoursite.com/2015/01/23/mysql%E7%B4%A2%E5%BC%95/index.html">
+<meta property="og:url" content="http://yoursite.com/2015/01/23/mysql索引/index.html">
 <meta property="og:site_name" content="慢慢来">
 <meta property="og:description" content="索引是什么索引是为了加速对表中数据行的检索而创建的一种分散的存储结构。索引存储着数据库数据在磁盘上的物理地址，查询时利用索引可以加快执行速度，尤其是数据量比较大时，索引的效果非常明显。一个非常恰当的比喻就是书的目录页与书的正文内容之间的关系，为了方便查找书中的内容，通过对内容建立索引形成目录。因此，要明白的一点就是，索引它也是一个文件，它是要占据物理空间的，而且占用的空间还不小，针对多个维度建立索">
-<meta property="og:image" content="http://yoursite.com/2015/01/23/mysql%E7%B4%A2%E5%BC%95/2015/01/23/mysql%E7%B4%A2%E5%BC%95/top.png">
-<meta property="article:published_time" content="2015-01-23T09:25:49.000Z">
-<meta property="article:modified_time" content="2020-05-31T10:26:13.759Z">
-<meta property="article:author" content="yeanda">
-<meta property="article:tag" content="数据库，索引">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2015/01/23/mysql索引/2015/01/23/mysql索引/top.png">
+<meta property="og:updated_time" content="2020-05-31T10:26:13.759Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2015/01/23/mysql%E7%B4%A2%E5%BC%95/2015/01/23/mysql%E7%B4%A2%E5%BC%95/top.png">
+<meta name="twitter:title" content="mysql索引">
+<meta name="twitter:description" content="索引是什么索引是为了加速对表中数据行的检索而创建的一种分散的存储结构。索引存储着数据库数据在磁盘上的物理地址，查询时利用索引可以加快执行速度，尤其是数据量比较大时，索引的效果非常明显。一个非常恰当的比喻就是书的目录页与书的正文内容之间的关系，为了方便查找书中的内容，通过对内容建立索引形成目录。因此，要明白的一点就是，索引它也是一个文件，它是要占据物理空间的，而且占用的空间还不小，针对多个维度建立索">
+<meta name="twitter:image" content="http://yoursite.com/2015/01/23/mysql索引/2015/01/23/mysql索引/top.png">
 
 
 
@@ -137,7 +138,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -254,12 +255,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/01/23/mysql%E7%B4%A2%E5%BC%95/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/01/23/mysql索引/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yeanda">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/%E5%B0%8F%E5%9B%A7%E7%86%8A.gif">
+      <meta itemprop="image" content="/images/小囧熊.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -306,7 +307,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
                     <span itemprop="name">数据库</span>
                   </a>
                 </span>
@@ -346,9 +347,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="/2015/01/23/mysql%E7%B4%A2%E5%BC%95/top.png" rel="gallery_ckav25cod000prwt2ae8ucjzl"
+                 href="/2015/01/23/mysql索引/top.png" rel="gallery_ckqnj3y8y000r18t2hitiiym8"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/2015/01/23/mysql%E7%B4%A2%E5%BC%95/top.png" itemprop="contentUrl"/>
+                <img src="/2015/01/23/mysql索引/top.png" itemprop="contentUrl"/>
               </a>
             
           
@@ -362,9 +363,8 @@
         <h2 id="索引是什么"><a href="#索引是什么" class="headerlink" title="索引是什么"></a>索引是什么</h2><p>索引是为了加速对表中数据行的检索而创建的一种分散的存储结构。<br>索引存储着数据库数据在磁盘上的物理地址，查询时利用索引可以加快执行速度，尤其是数据量比较大时，索引的效果非常明显。<br>一个非常恰当的比喻就是书的目录页与书的正文内容之间的关系，为了方便查找书中的内容，通过对内容建立索引形成目录。因此，要明白的一点就是，索引它也是一个文件，它是要占据物理空间的，而且占用的空间还不小，针对多个维度建立索引并且数据量还比较大，那么索引占用的物理空间和数据空间差不多。<br>索引文件：<br>1.对于innodb引擎来说</p>
 <ul>
 <li>.frm后缀的文件存储的是表结构；</li>
-<li>.ibd后缀的文件存放索引文件和数据。</li>
+<li>.ibd后缀的文件存放索引文件和数据。<br>2.对于myisam引擎来说</li>
 </ul>
-<p>2.对于myisam引擎来说</p>
 <ul>
 <li>.frm后缀的文件存储的是表结构；</li>
 <li>.myd后缀的文件存储的是表数据；</li>
@@ -389,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E7%B4%A2%E5%BC%95/" rel="tag"># 数据库，索引</a>
+            <a href="/tags/数据库，索引/" rel="tag"># 数据库，索引</a>
           
         </div>
       
@@ -402,7 +402,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/22/%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/" rel="next" title="事务隔离级别">
+              <a href="/2015/01/22/事务隔离级别/" rel="next" title="事务隔离级别">
                 <i class="fa fa-chevron-left"></i> 事务隔离级别
               </a>
             
@@ -412,7 +412,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/01/%E5%A4%B4%E6%96%87%E4%BB%B6%E9%87%8D%E5%A4%8D%E5%BC%95%E7%94%A8/" rel="prev" title="头文件重复引用">
+              <a href="/2015/03/01/头文件重复引用/" rel="prev" title="头文件重复引用">
                 头文件重复引用 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -481,7 +481,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/%E5%B0%8F%E5%9B%A7%E7%86%8A.gif"
+                src="/images/小囧熊.gif"
                 alt="yeanda" />
             
               <p class="site-author-name" itemprop="name">yeanda</p>
@@ -493,9 +493,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%7C%7C%20archive">
+                <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -506,7 +506,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -570,7 +570,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

@@ -80,17 +80,17 @@
 
 
 <meta name="description" content="简介deque是double-ended queue的简写，代表双向队列。它是一个顺序容器，并且可以动态的调整大小，在头部和尾部都可以进行扩展。看起来deque和vector有些类似，他们在头部和尾部进行插入、删除操作都有着很高的效率，不同的是，deque并不保证它的元素都存储在连续的内存空间，使用指针便宜去访问deque中的元素是非法操作。vector使用的是一个简单的数组来进行存储，当然这个数">
+<meta name="keywords" content="c++,STL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="STL系列二：deque">
-<meta property="og:url" content="http://yoursite.com/2018/11/01/STL%E7%B3%BB%E5%88%97%E4%BA%8C%EF%BC%9Adeque/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/11/01/STL系列二：deque/index.html">
 <meta property="og:site_name" content="慢慢来">
 <meta property="og:description" content="简介deque是double-ended queue的简写，代表双向队列。它是一个顺序容器，并且可以动态的调整大小，在头部和尾部都可以进行扩展。看起来deque和vector有些类似，他们在头部和尾部进行插入、删除操作都有着很高的效率，不同的是，deque并不保证它的元素都存储在连续的内存空间，使用指针便宜去访问deque中的元素是非法操作。vector使用的是一个简单的数组来进行存储，当然这个数">
-<meta property="article:published_time" content="2018-11-01T03:15:35.000Z">
-<meta property="article:modified_time" content="2020-05-31T10:26:13.748Z">
-<meta property="article:author" content="yeanda">
-<meta property="article:tag" content="c++">
-<meta property="article:tag" content="STL">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-31T10:26:13.748Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="STL系列二：deque">
+<meta name="twitter:description" content="简介deque是double-ended queue的简写，代表双向队列。它是一个顺序容器，并且可以动态的调整大小，在头部和尾部都可以进行扩展。看起来deque和vector有些类似，他们在头部和尾部进行插入、删除操作都有着很高的效率，不同的是，deque并不保证它的元素都存储在连续的内存空间，使用指针便宜去访问deque中的元素是非法操作。vector使用的是一个简单的数组来进行存储，当然这个数">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -253,12 +253,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/01/STL%E7%B3%BB%E5%88%97%E4%BA%8C%EF%BC%9Adeque/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/01/STL系列二：deque/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yeanda">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/%E5%B0%8F%E5%9B%A7%E7%86%8A.gif">
+      <meta itemprop="image" content="/images/小囧熊.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -343,10 +343,10 @@
 
       
         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>deque是double-ended queue的简写，代表双向队列。它是一个顺序容器，并且可以动态的调整大小，在头部和尾部都可以进行扩展。<br>看起来deque和vector有些类似，他们在头部和尾部进行插入、删除操作都有着很高的效率，不同的是，deque并不保证它的元素都存储在连续的内存空间，使用指针便宜去访问deque中的元素是非法操作。<br>vector使用的是一个简单的数组来进行存储，当然这个数组可能会被进行扩展，但是deque存储在不同的内存块上，所以当元素特别多的时候，deque在扩展的时候比vector更有效率。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>  std::deque<int> first;                                // empty deque of ints</p>
-<p>  std::deque<int> second (4,100);                       // four ints with value 100</p>
-<p>  std::deque<int> third (second.begin(),second.end());  // iterating through second</p>
-<p>  std::deque<int> fourth (third);                       // a copy of third</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>  std::deque<int> first;                                // empty deque of ints</int></p>
+<p>  std::deque<int> second (4,100);                       // four ints with value 100</int></p>
+<p>  std::deque<int> third (second.begin(),second.end());  // iterating through second</int></p>
+<p>  std::deque<int> fourth (third);                       // a copy of third</int></p>
 <h3 id="访问方式"><a href="#访问方式" class="headerlink" title="访问方式"></a>访问方式</h3><p>1.a[i],可以直接使用下标访问array的元素；</p>
 <p>2.at(i),也可以</p>
 <p>3.front(),返回第一个元素</p>
@@ -393,7 +393,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/01/STL%E7%B3%BB%E5%88%97%E4%B8%80%EF%BC%9Aarray/" rel="next" title="STL系列一：array">
+              <a href="/2018/11/01/STL系列一：array/" rel="next" title="STL系列一：array">
                 <i class="fa fa-chevron-left"></i> STL系列一：array
               </a>
             
@@ -403,7 +403,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/01/STL%E7%B3%BB%E5%88%97%E4%B8%89%EF%BC%9Aforward-list/" rel="prev" title="STL系列三：forward_list">
+              <a href="/2018/11/01/STL系列三：forward-list/" rel="prev" title="STL系列三：forward_list">
                 STL系列三：forward_list <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -472,7 +472,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/%E5%B0%8F%E5%9B%A7%E7%86%8A.gif"
+                src="/images/小囧熊.gif"
                 alt="yeanda" />
             
               <p class="site-author-name" itemprop="name">yeanda</p>
@@ -484,9 +484,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%7C%7C%20archive">
+                <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -497,7 +497,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -561,7 +561,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
